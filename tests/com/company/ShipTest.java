@@ -10,7 +10,7 @@ public class ShipTest {
     User ai = new User("AI");
     User player1 = new User("Player One");
     Board boardAI = new Board(7);
-    Ship testing;
+    Ship testing = new Ship(5);
 
     @Before
     public void setUp(){
@@ -18,9 +18,15 @@ public class ShipTest {
     }
 
     @Test
-    public void constructor_Test(){}
+    public void constructor_Test(){
+        System.out.println(testing.getM_length());
+        System.out.println(testing.getIsHorizontal());
+        System.out.println(testing.getM_health());
+        System.out.println(testing.getM_name());
 
-    testing.getH
+    }
+
+
 
 
 
