@@ -8,27 +8,117 @@ import java.awt.Point;
 
 public class Game {
 
-    public void startGame(){
-//       TakeInput.
+    private Board boardPlayer1;
+    private Board boardPlayer2;
+    private Board boardAI;
+
+
+    public boolean isAIGame() {
+        int answer = TakeInput.requestInput(TakeInput.askIfAiGame());
+        boolean tmp = false;
+        if (answer == 0) {
+            tmp = false;
+        } else {
+            tmp = true;
+        }
+        return tmp;
+    }
+
+    public void startGame() {
+        System.out.println(TakeInput.welcomeMessage() + "\n");
+        User AI = new User("AI");
+        User player1;
+        User player2;
+
+        if(isAIGame()){
+          player1 = new User("Player");
+          AI = new User("AI");
+         }else{
+             player1 = new User("Player One");
+             player2 = new User("Player Two");
+        }
+
+        int boardSize = TakeInput.requestInput(TakeInput.askForBoardSize());
+        boardAI = new Board(boardSize);
+        shipSetupProcess(boardAI, AI);
+        displayBoard(boardAI);
+    }
+
+    public void displayBoard(Board board) {
+        System.out.println(board.appendHeadings(board));
+        System.out.println(board.appendHeadings2(board)); // DELETE BEFORE GOING LIVE, PRINTS REAL LEFT CO-ORDS
+        for (int row = 0; row < board.getM_rows(); row++) {
+            System.out.println();
+            System.out.print((row + 1) + "");
+            System.out.print((" " + row) + ""); //DELETE BEFORE GOING LIVE
+            for (int column = 0; column < board.getM_columns(); column++) {
+                if (board.m_board[row][column] == -1) {
+                    System.out.print("\t" + "`");
+                }//Changes initial state from -1 to -
+                else if (board.m_board[row][column] == 0) {
+                    System.out.print("\t" + "M");
+                }//Changes a 0 to M (Must write method in guess to change -1 to 0 on miss)
+                else if (board.m_board[row][column] == 1) {
+                    System.out.print("\t" + "`");
+                }//Changes a 1 to X (Must write method in guess to change -1 to 1 o hit)
+                else if (board.m_board[row][column] == 2) {
+                    System.out.print("\t" + "X");
+
+                }
+            }
+        }
+        System.out.println();
     }
 
 
+    //Ship placement Logic
+    public void shipSetupProcess(Board board, User user) {
+        int aiShipAmount = TakeInput.requestInput(TakeInput.askForShipAmount());
 
-
-
-
-
+        for (int i = 0; i < aiShipAmount; i++) {
+            if (i == 0) {
+                int shipSize = TakeInput.requestInput(TakeInput.askForShipSize(true));
+                if (shipSize > board.getM_rows()) {
+                    TakeInput.intToHigh();
+                    shipSize = TakeInput.requestInput(TakeInput.askForShipSize(true));
+                } else {
+                    Ship ship = new Ship(shipSize);
+                    placeShip(board, ship);
+                    user.addShipToUser(ship);
+                }
+            } else if (i == aiShipAmount - 1) {
+                int shipSize = TakeInput.requestInput(TakeInput.askForShipSizeLast());
+                if (shipSize > board.getM_rows()) {
+                    TakeInput.intToHigh();
+                    shipSize = TakeInput.requestInput(TakeInput.askForShipSizeLast());
+                } else {
+                    Ship ship = new Ship(shipSize);
+                    placeShip(board, ship);
+                    user.addShipToUser(ship);
+                }
+            } else {
+                int shipSize = TakeInput.requestInput(TakeInput.askForShipSize(false));
+                if (shipSize > board.getM_rows()) {
+                    TakeInput.intToHigh();
+                    shipSize = TakeInput.requestInput(TakeInput.askForShipSize(false));
+                } else {
+                    Ship ship = new Ship(shipSize);
+                    placeShip(board, ship);
+                    user.addShipToUser(ship);
+                }
+            }
+        }
+    }
 
     public void placeShip(Board board, Ship ship) {
         Point startLoc = getStartPoint(board, ship);
-        if(checkShipPlacements(ship, startLoc, board)){
+        if (checkShipPlacements(ship, startLoc, board)) {
             addLocationsToShip(board, ship, startLoc);
-        }else{
+        } else {
             placeShip(board, ship);
         }
     }
 
-    //Ship placement Logic
     public Point getStartPoint(Board board, Ship ship) {
         int temp = 0;
         int temp2 = 0;

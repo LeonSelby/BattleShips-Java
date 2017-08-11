@@ -17,28 +17,9 @@ public class Board {
         }
     }
 
-    public void displayBoard(Board board){
-        System.out.println(appendHeadings(board));
-        System.out.println(appendHeadings2(board)); // DELETE BEFORE GOING LIVE, PRINTS REAL LEFT CO-ORDS
-        for(int row = 0; row < m_rows; row++){
-            System.out.println();
-            System.out.print((row + 1)+"");
-            System.out.print((" "+row)+""); //DELETE BEFORE GOING LIVE
-            for (int column = 0; column < m_columns; column++){
-                if(board.m_board[row][column] == -1){
-                    System.out.print("\t" + "`");
-                }//Changes initial state from -1 to -
-                else if(board.m_board[row][column] == 0){
-                    System.out.print("\t" + "M");
-                }//Changes a 0 to M (Must write method in guess to change -1 to 0 on miss)
-                else if(board.m_board[row][column] == 1){
-                    System.out.print("\t" + "X");
-                }//Changes a 1 to X (Must write method in guess to change -1 to 1 o hit)
-            }
-        }System.out.println();
-    }
 
-    private String appendHeadings(Board board) {
+
+    public String appendHeadings(Board board) {
         int[] numberOfColumns = new int[board.m_columns];
         StringBuilder sb = new StringBuilder(board.m_columns + 50);
         for (int i = 0; i < numberOfColumns.length; i++) {
@@ -49,7 +30,7 @@ public class Board {
         return sb.toString();
     }
 
-    private String appendHeadings2(Board board) {
+    public String appendHeadings2(Board board) {
         int[] numberOfColumns = new int[board.m_columns];
         StringBuilder sb = new StringBuilder(board.m_columns + 50);
         for (int i = 0; i < numberOfColumns.length; i++) {

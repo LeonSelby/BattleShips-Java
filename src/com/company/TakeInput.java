@@ -39,8 +39,12 @@ public class TakeInput {
 
     //Questions
 
+    static public String askIfAiGame(){
+        return "Do you want to play vs the AI? 1 for Yes, 0 for No.";
+    }
+
     static public String askForBoardSize() {
-        return "How many rows and columns could you like the board to have?\n Please enter a number.";
+        return "How many rows and columns would you like the board to have?\n Please enter a number.";
     }
 
     static public String askForGuess(String colOrRow) {
@@ -61,8 +65,11 @@ public class TakeInput {
         return tmp;
     }
 
-    //Statements
+    static public String askForShipSizeLast(){
+        return "What size ship would you like last?";
+    }
 
+    //Statements
     static public String welcomeMessage() {
         return "Welcome to QA Battleships!";
     }
@@ -103,4 +110,8 @@ public class TakeInput {
     static private void needIntPlease() {
         System.out.println("We're sorry! Please input a number!");
     }
+    static public void intToHigh(){
+        System.out.println("We're sorry that number is too high!");
+    }
+
 }

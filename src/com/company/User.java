@@ -1,7 +1,9 @@
 package com.company;
 
 import com.company.Ships.Ship;
+import com.company.board.Board;
 
+import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +15,12 @@ public class User {
     private String name = "";
     private List<Ship> listOfShips = new ArrayList<Ship>();
 
-
-    //Getters and Setters
+    //Constructors
     public User(String name) {
         this.name = name;
     }
 
+    //Getters and Setters
     public int getM_health() {
         return this.m_health;
     }
@@ -39,4 +41,16 @@ public class User {
         return this.name;
     }
 
+    //Methods
+    public void addShipToUser(Ship ship) {
+        this.listOfShips.add(ship);
+    }
+
+    public void shoot(Board board) {
+        int guessX = TakeInput.requestInput(TakeInput.askForGuess("column"));
+        int guessY = TakeInput.requestInput(TakeInput.askForGuess("row"));
+
+        Point guessReq = new Point(guessY, guessX);
+        //CHECK SPOT
+    }
 }
