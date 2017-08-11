@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.Ships.Ship;
+import com.company.Ship;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

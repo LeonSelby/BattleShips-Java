@@ -1,10 +1,9 @@
 package com.company;
 
-import com.company.*;
-import com.company.Ships.Ship;
-import com.company.board.Board;
+import com.company.Ship;
+import com.company.Board;
 
-import java.awt.Point;
+import java.awt.*;
 
 public class Game {
 
