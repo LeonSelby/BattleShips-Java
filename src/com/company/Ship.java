@@ -7,14 +7,15 @@ public class Ship {
     private int m_health = 0, m_length = 0;
     private String m_name = null;
     private Point[] locations = new Point[m_length];
-    private boolean isHorizontal = isHorizontal();
-    private boolean m_alive = true;
+    private boolean isHorizontal;
+    private boolean m_alive = isAlive();
 
     //Constructor
     public Ship(int health) {
         this.m_health = health;
         this.m_length = health;
         this.m_alive = true;
+        this.isHorizontal = isHorizontal();
         switch (health) {
             case 0:
                 this.m_name = "Phantom Boat";
@@ -53,18 +54,19 @@ public class Ship {
     }
 
     //Methods
-    public void takeDamage(Ship ship, int damageTaken) {
-        if (ship.isAlive()) {
-            ship.setM_health(ship.getM_health() - damageTaken);
-        }
-        if (!ship.isAlive()) {
-            ship.setM_alive(false);
+    public void takeDamage (int damageTaken) {
+        if (this.isM_alive()) {
+            this.setM_health(this.getM_health() - damageTaken);
         }
     }
 
     //Getters and Setters
     public int getM_health() {
-        return m_health;
+        return this.m_health;
+    }
+
+    public boolean isM_alive() {
+        return this.m_alive;
     }
 
     public void setM_health(int m_health) {
@@ -77,10 +79,6 @@ public class Ship {
 
     public int getM_length() {
         return m_length;
-    }
-
-    public void setM_alive(boolean alive) {
-        this.m_alive = alive;
     }
 
     public void setHorizontal(boolean horizontal) {
@@ -122,7 +120,7 @@ public class Ship {
         } else if (!this.getIsHorizontal()) {
             direction = "vertical";
         }
-        System.out.println(direction + " " + this+"ship length is "
+        System.out.println(direction + " " + this.getM_name()+", ship length is "
                 + this.getM_length());
     }
 
@@ -134,12 +132,12 @@ public class Ship {
 
 
     //Utility Methods
-    public int randomNumberInRange(int min, int max) {
+    public int randomNumberUpTo(int min, int max) {
         int range = (max - min);
         return (int) (Math.random() * range) + min;
     }
 
     public boolean isHorizontal() {
-        return randomNumberInRange(0, 3) > 1;
+        return randomNumberUpTo(0, 4) > 1;
     }
 }

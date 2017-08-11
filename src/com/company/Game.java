@@ -1,8 +1,5 @@
 package com.company;
 
-import com.company.Ship;
-import com.company.Board;
-
 import java.awt.*;
 
 public class Game {
@@ -146,12 +143,12 @@ public class Game {
         Point tmp = null;
         do {
             if (ship.getIsHorizontal()) {
-                temp = ship.randomNumberInRange(0, board.getM_rows() - 2);
-                temp2 = ship.randomNumberInRange(0, 3);
+                temp = ship.randomNumberUpTo(0, board.getM_rows() - 2);
+                temp2 = ship.randomNumberUpTo(0, 3);
                 tmp = new Point(temp, temp2);
             } else if (!ship.getIsHorizontal()) {
-                temp = ship.randomNumberInRange(0, 3);
-                temp2 = ship.randomNumberInRange(0, board.getM_rows() - 2);
+                temp = ship.randomNumberUpTo(0, 3);
+                temp2 = ship.randomNumberUpTo(0, board.getM_rows() - 2);
                 tmp = new Point(temp, temp2);
             }
         } while (!(board.m_board[temp][temp2] == -1));
