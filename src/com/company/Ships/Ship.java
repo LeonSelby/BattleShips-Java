@@ -1,7 +1,5 @@
 package com.company.Ships;
 
-import com.company.board.Board;
-
 import java.awt.*;
 
 public class Ship {
@@ -11,7 +9,6 @@ public class Ship {
     private Point[] locations = new Point[m_length];
     private boolean isHorizontal = isHorizontal();
     private boolean m_alive = true;
-
 
     //Constructor
     public Ship(int health) {
@@ -65,7 +62,6 @@ public class Ship {
         }
     }
 
-
     //Getters and Setters
     public int getM_health() {
         return m_health;
@@ -118,6 +114,18 @@ public class Ship {
         }
         System.out.println(tmp);
     }
+
+    public  void declareLengthAndDir() {
+        String direction = "";
+        if (this.getIsHorizontal()) {
+            direction = "horizontal";
+        } else if (!this.getIsHorizontal()) {
+            direction = "vertical";
+        }
+        System.out.println(direction + " " + this+"ship length is "
+                + this.getM_length());
+    }
+
 
     //Utility Booleans
     public boolean isAlive() {

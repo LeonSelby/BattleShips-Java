@@ -7,14 +7,14 @@ import java.util.Scanner;
 
 public class TakeInput {
 
-    Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
     //Input
-    String takeNextLine() {
+    static String takeNextLine() {
         return sc.nextLine();
     }
 
-    int takeNextInt() {
+    static int takeNextInt() {
         boolean badInput = true;
         int tmp = 0;
 
@@ -31,7 +31,7 @@ public class TakeInput {
         return tmp;
     }
 
-    public int requestInput(String question) {
+    static public int requestInput(String question) {
         System.out.println(question);
         int ans = takeNextInt();
         return ans;
@@ -39,19 +39,19 @@ public class TakeInput {
 
     //Questions
 
-    public String askForBoardSize() {
+    static public String askForBoardSize() {
         return "How many rows and columns could you like the board to have?\n Please enter a number.";
     }
 
-    public String askForGuess(String colOrRow) {
+    static public String askForGuess(String colOrRow) {
         return "Which " + colOrRow + " do you want to try?";
     }
 
-    public String askForShipAmount() {
+    static public String askForShipAmount() {
         return "How many ships do you want each player to have?";
     }
 
-    public String askForShipSize(boolean isFirst) {
+    static public String askForShipSize(boolean isFirst) {
         String tmp;
         if (isFirst) {
             tmp = "What size ship would you like?";
@@ -63,19 +63,19 @@ public class TakeInput {
 
     //Statements
 
-    public String welcomeMessage() {
+    static public String welcomeMessage() {
         return "Welcome to QA Battleships!";
     }
 
-    public String guessResponse(String hitOrMiss) {
+    static public String guessResponse(String hitOrMiss) {
         return "That was a " + hitOrMiss + "!";
     }
 
-    public String youSunk(Ship ship) {
+    static public String youSunk(Ship ship) {
         return "You sunk " + ship.getM_name() + "!";
     }
 
-    public String resultString(String p12orAI) {
+    static public String resultString(String p12orAI) {
         String tmp;
         if (p12orAI.equalsIgnoreCase("1")) {
             tmp = "Player one wins!";
@@ -87,7 +87,7 @@ public class TakeInput {
         return tmp;
     }
 
-    public String stateGrade(Grade grade) {
+    static public String stateGrade(Grade grade) {
         String tmp;
         if (grade == Grade.S) {
             tmp = "You earned a " + grade + " ranking! That's a perfect score!";
@@ -100,7 +100,7 @@ public class TakeInput {
     }
 
     //Errors
-    private void needIntPlease() {
+    static private void needIntPlease() {
         System.out.println("We're sorry! Please input a number!");
     }
 }
