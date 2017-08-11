@@ -11,7 +11,9 @@ public class Game {
     private Board boardPlayer1;
     private Board boardPlayer2;
     private Board boardAI;
-
+    private User AI;
+    private User player1;
+    private User player2;
 
     public boolean isAIGame() {
         int answer = TakeInput.requestInput(TakeInput.askIfAiGame());
@@ -26,23 +28,43 @@ public class Game {
 
     public void startGame() {
         System.out.println(TakeInput.welcomeMessage() + "\n");
-        User AI = new User("AI");
-        User player1;
-        User player2;
+        boolean aiGame = isAIGame();
+        int boardSize = TakeInput.requestInput(TakeInput.askForBoardSize());
+        int shipAmount = TakeInput.requestInput(TakeInput.askForShipAmount());
 
-        if(isAIGame()){
-          player1 = new User("Player");
-          AI = new User("AI");
-         }else{
-             player1 = new User("Player One");
-             player2 = new User("Player Two");
+
+        if (aiGame) {
+            this.player1 = new User("Player");
+            this.AI = new User("AI");
+            this.boardAI = new Board(boardSize);
+
+
+            mainAIGameStages(shipAmount);
+        } else {
+            player1 = new User("Player One");
+            this.boardPlayer1 = new Board(boardSize);
+            player2 = new User("Player Two");
+            this.boardPlayer2 = new Board(boardSize);
         }
 
-        int boardSize = TakeInput.requestInput(TakeInput.askForBoardSize());
-        boardAI = new Board(boardSize);
-        shipSetupProcess(boardAI, AI);
+
+        displayBoard(boardAI);
+        player1.shoot(boardAI);
         displayBoard(boardAI);
     }
+
+    public void mainAIGameStages(int shipAmount) {
+
+        shipSetupProcess(this.boardAI, this.AI, shipAmount);
+        do {
+            displayBoard(boardAI);
+            player1.shoot(boardAI);
+            System.out.println(player1.getM_dmgDone()+" out of "+player1.getM_health());
+        } while (!player1.isHasWon());
+
+        System.out.println(TakeInput.resultString("player one"));
+    }
+
 
     public void displayBoard(Board board) {
         System.out.println(board.appendHeadings(board));
@@ -59,11 +81,11 @@ public class Game {
                     System.out.print("\t" + "M");
                 }//Changes a 0 to M (Must write method in guess to change -1 to 0 on miss)
                 else if (board.m_board[row][column] == 1) {
-                    System.out.print("\t" + "`");
-                }//Changes a 1 to X (Must write method in guess to change -1 to 1 o hit)
+                    System.out.print("\t" + "S");
+                }//Changes a 1 to ` (Must write method in guess to change -1 to 1 on ship)
                 else if (board.m_board[row][column] == 2) {
                     System.out.print("\t" + "X");
-
+                    //Changes a 2 to X (Must write method in guess to change -1 to 1 on hit)
                 }
             }
         }
@@ -72,10 +94,9 @@ public class Game {
 
 
     //Ship placement Logic
-    public void shipSetupProcess(Board board, User user) {
-        int aiShipAmount = TakeInput.requestInput(TakeInput.askForShipAmount());
+    public void shipSetupProcess(Board board, User user, int shipAmount) {
 
-        for (int i = 0; i < aiShipAmount; i++) {
+        for (int i = 0; i < shipAmount; i++) {
             if (i == 0) {
                 int shipSize = TakeInput.requestInput(TakeInput.askForShipSize(true));
                 if (shipSize > board.getM_rows()) {
@@ -86,7 +107,7 @@ public class Game {
                     placeShip(board, ship);
                     user.addShipToUser(ship);
                 }
-            } else if (i == aiShipAmount - 1) {
+            } else if (i == shipAmount - 1) {
                 int shipSize = TakeInput.requestInput(TakeInput.askForShipSizeLast());
                 if (shipSize > board.getM_rows()) {
                     TakeInput.intToHigh();
@@ -108,6 +129,7 @@ public class Game {
                 }
             }
         }
+        user.initHealth();
     }
 
     public void placeShip(Board board, Ship ship) {
