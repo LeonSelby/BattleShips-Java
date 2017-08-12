@@ -232,7 +232,9 @@ public class Game {
                 temp2 = ship.randomNumberUpTo(0, board.getBoardRows() - ship.getLength());
                 tmp = new Point(temp, temp2);
             }
-        } while (!(board.boardArray[temp][temp2] == -1));
+        } while (board.boardArray[temp][temp2]!=-1
+//                !(board.boardArray[temp][temp2] == -1)
+                );
         return tmp;
     }
 
@@ -247,7 +249,9 @@ public class Game {
         Point[] potentialLocs = new Point[ship.getLength()];
         if (ship.getIsHorizontal()) {//HORIZONTAL, SO Y is length
             for (int i = 0; i < ship.getLength(); i++) {
-                if (!(board.boardArray[startingLoc.x][startingLoc.y + i] == -1)) {
+                if (board.boardArray[startingLoc.x][startingLoc.y+i]!=-1
+//                        !(board.boardArray[startingLoc.x][startingLoc.y + i] == -1)
+                        ) {
                     board.boardArray[startingLoc.x][startingLoc.y + i] = 1;
                     potentialLocs[i] = new Point(startingLoc.x, startingLoc.y + i);
                     break;

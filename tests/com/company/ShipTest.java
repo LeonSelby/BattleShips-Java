@@ -10,12 +10,12 @@ import java.awt.*;
 
 public class ShipTest {
 
-    Game newGame = new Game();
-    TakeInput takeInput = new TakeInput();
-    User ai = new User();
-    User player1 = new User();
-    Board boardAI = new Board(7);
-    Ship testing;
+    private Game newGame = new Game();
+    private TakeInput takeInput = new TakeInput();
+    private  User ai = new User();
+    private  User player1 = new User();
+    private  Board boardAI = new Board(7);
+    private  Ship testing;
 
     @Before
     public void setUp() {

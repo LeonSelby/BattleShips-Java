@@ -100,7 +100,7 @@ public class User {
         } while (
                 (!(guessIsInBounds(guessReq, board)))
                         &&
-                        (!(board.boardArray[guessX][guessY] > 0)));
+                        ((board.boardArray[guessX][guessY] <= 0)));
         this.markMarkWithShot(board, guessReq);
         this.shotsTaken++;
     }

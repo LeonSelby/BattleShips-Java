@@ -5,14 +5,14 @@ import java.util.Scanner;
 
 public class TakeInput {
 
-    static Scanner sc = new Scanner(System.in);
+    static public Scanner sc = new Scanner(System.in);
 
     //Input
-    static String takeNextLine() {
+    static public String takeNextLine() {
         return sc.nextLine();
     }
 
-    static int takeNextInt() {
+    static public int takeNextInt() {
         boolean badInput = true;
         int tmp = 0;
         while (badInput) {
@@ -28,7 +28,7 @@ public class TakeInput {
         return tmp;
     }
 
-    static int takeNextIntInRange(int min, int max) {
+    static public int takeNextIntInRange(int min, int max) {
         boolean badInput = true;
         int tmp = 0;
 

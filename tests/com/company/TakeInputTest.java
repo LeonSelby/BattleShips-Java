@@ -10,12 +10,12 @@ import static com.company.Grade.*;
 public class TakeInputTest {
 
 
-    Game newGame = new Game();
-    TakeInput testing;
-    User ai = new User();
-    User player1 = new User();
-    Board boardAI = new Board(7);
-    Ship ship = new Ship(3);
+    private Game newGame = new Game();
+    private  TakeInput testing;
+    private  User ai = new User();
+    private User player1 = new User();
+    private Board boardAI = new Board(7);
+    private Ship ship = new Ship(3);
 
     @Before
     public void setUp() {

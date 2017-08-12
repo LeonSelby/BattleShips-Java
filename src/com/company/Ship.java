@@ -8,13 +8,11 @@ public class Ship {
     private String name = null;
     private Point[] locations = new Point[length];
     private boolean isHorizontal;
-    private boolean m_alive = isAlive();
 
     //Constructor
     public Ship(int health) {
         this.health = health;
         this.length = health;
-        this.m_alive = true;
         this.isHorizontal = isHorizontal();
         switch (health) {
             case 0:
@@ -98,14 +96,6 @@ public class Ship {
         this.locations = new Point[this.length];
     }
 
-    public void printLocationPoints(){
-        String tmp = "";
-        for (Point p:this.getLocation()) {
-            tmp+= " "+p;
-        }
-        System.out.println(tmp);
-    }
-
     public  void declareLengthAndDir() {
         String direction = "";
         if (this.getIsHorizontal()) {
@@ -116,7 +106,6 @@ public class Ship {
         System.out.println(direction + " " + this.getName()+", ship length is "
                 + this.getLength());
     }
-
 
     //Utility Booleans
     public boolean isAlive() {

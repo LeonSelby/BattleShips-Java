@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63f486c4-0e16-40af-87e6-5e9e8b9208b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/com/company/BoardTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled/com/company/Game.class" afterPath="$PROJECT_DIR$/out/production/untitled/com/company/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/untitled/com/company/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled/com/company/TakeInput.class" afterPath="$PROJECT_DIR$/out/production/untitled/com/company/TakeInput.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Board.java" afterPath="$PROJECT_DIR$/src/com/company/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Game.java" afterPath="$PROJECT_DIR$/src/com/company/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Ship.java" afterPath="$PROJECT_DIR$/src/com/company/Ship.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TakeInput.java" afterPath="$PROJECT_DIR$/src/com/company/TakeInput.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/User.java" afterPath="$PROJECT_DIR$/src/com/company/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/company/GameTest.java" afterPath="$PROJECT_DIR$/tests/com/company/GameTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/company/ShipTest.java" afterPath="$PROJECT_DIR$/tests/com/company/ShipTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/company/TakeInputTest.java" afterPath="$PROJECT_DIR$/tests/com/company/TakeInputTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/company/UserTest.java" afterPath="$PROJECT_DIR$/tests/com/company/UserTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,234 +21,172 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47708333">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TakeInputTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/com/company/TakeInputTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#375#376#0" expanded="true" />
-                    <element signature="e#416#417#0" expanded="true" />
-                    <element signature="e#639#640#0" expanded="true" />
-                    <element signature="e#685#686#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/company/Game.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="303" column="0" lean-forward="true" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
-                  <folding>
-                    <element signature="method#isAIGame#0;class#Game#0" expanded="false" />
-                    <element signature="method#isSoloAiGame#0;class#Game#0" expanded="false" />
-                    <element signature="method#startGame#0;class#Game#0" expanded="false" />
-                    <element signature="method#mainAiGameStage#0;class#Game#0" expanded="false" />
-                    <element signature="method#mainGameTwoPlayers#0;class#Game#0" expanded="false" />
-                    <element signature="method#mainSoloAIGameStages#0;class#Game#0" expanded="false" />
-                    <element signature="method#displayBoard#0;class#Game#0" expanded="false" />
-                    <element signature="method#setUpBothBoardsWithShips#0;class#Game#0" expanded="false" />
-                    <element signature="method#shipSetupProcess#0;class#Game#0" expanded="false" />
-                    <element signature="method#placeShip#0;class#Game#0" expanded="false" />
-                    <element signature="method#getStartPoint#0;class#Game#0" expanded="false" />
-                    <element signature="method#addLocationsToShip#0;class#Game#0" expanded="false" />
-                    <element signature="method#makeShipLocArray#0;class#Game#0" expanded="false" />
-                    <element signature="method#checkShipPlacements#0;class#Game#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/company/Board.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-                  <folding>
-                    <element signature="method#Board#0;class#Board#0" expanded="false" />
-                    <element signature="method#appendHeadings#0;class#Board#0" expanded="false" />
-                    <element signature="method#appendHeadings2#0;class#Board#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/company/User.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="831">
-                  <caret line="196" column="1" lean-forward="true" selection-start-line="196" selection-start-column="1" selection-end-line="196" selection-end-column="1" />
-                  <folding>
-                    <element signature="method#isHasWon#0;class#User#0" expanded="false" />
-                    <element signature="method#updateHasWon#0;class#User#0" expanded="false" />
-                    <element signature="e#1332#1333#0" expanded="true" />
-                    <element signature="e#1362#1363#0" expanded="true" />
-                    <element signature="e#1396#1397#0" expanded="true" />
-                    <element signature="e#1434#1435#0" expanded="true" />
-                    <element signature="e#1692#1693#0" expanded="true" />
-                    <element signature="e#1742#1743#0" expanded="true" />
-                    <element signature="method#markMarkWithShot#0;class#User#0" expanded="false" />
-                    <element signature="method#initHealth#0;class#User#0" expanded="false" />
-                    <element signature="method#addDmgDone#0;class#User#0" expanded="false" />
-                    <element signature="method#assignGrade#0;class#User#0" expanded="false" />
-                    <element signature="method#guessIsInBounds#0;class#User#0" expanded="false" />
-                    <element signature="method#randomNumberUpTo#0;class#User#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/company/Game.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3162">
-                  <caret line="371" column="0" lean-forward="true" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
-                  <folding>
-                    <element signature="method#startGame#0;class#Game#0" expanded="false" />
-                    <element signature="method#displayBoard#0;class#Game#0" expanded="false" />
-                    <element signature="method#shipSetupProcess#0;class#Game#0" expanded="false" />
-                    <element signature="method#placeShip#0;class#Game#0" expanded="false" />
-                    <element signature="method#getStartPoint#0;class#Game#0" expanded="false" />
-                    <element signature="method#addLocationsToShip#0;class#Game#0" expanded="false" />
-                    <element signature="method#makeShipLocArray#0;class#Game#0" expanded="false" />
-                    <element signature="method#checkShipPlacements#0;class#Game#0" expanded="false" />
-                    <element signature="e#12089#12090#0" expanded="true" />
-                    <element signature="e#12127#12128#0" expanded="true" />
-                    <element signature="e#12180#12181#0" expanded="true" />
-                    <element signature="e#12224#12225#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Grade.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/company/Grade.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/com/company/UserTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="463">
-                  <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#updateHasWon_Test#0;class#UserTest#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ShipTest.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/com/company/ShipTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="573">
-                  <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#387#388#0" expanded="true" />
-                    <element signature="e#424#425#0" expanded="true" />
-                    <element signature="method#randomNumberGenerationBetweenRange_Test#0;class#ShipTest#0" expanded="false" />
-                    <element signature="method#add_Reset_Location_Test#0;class#ShipTest#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/com/company/GameTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="629">
-                  <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#376#377#0" expanded="true" />
-                    <element signature="e#412#413#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TakeInput.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/company/TakeInput.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-412">
-                  <caret line="104" column="53" lean-forward="false" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#takeNextInt#0;class#TakeInput#0" expanded="false" />
-                    <element signature="method#takeNextIntInRange#0;class#TakeInput#0" expanded="false" />
-                    <element signature="method#requestInput#0;class#TakeInput#0" expanded="false" />
-                    <element signature="method#requestInputInRange#0;class#TakeInput#0" expanded="false" />
-                    <element signature="method#requestInputInRange#1;class#TakeInput#0" expanded="false" />
-                    <element signature="method#requestYesOrNo#0;class#TakeInput#0" expanded="false" />
-                    <element signature="method#askForBoardSize#0;class#TakeInput#0" expanded="false" />
-                    <element signature="method#askForShipSize#0;class#TakeInput#0" expanded="false" />
-                    <element signature="method#resultString#0;class#TakeInput#0" expanded="false" />
-                    <element signature="method#intToHigh#0;class#TakeInput#0" expanded="false" />
-                    <element signature="method#needIntInRange#0;class#TakeInput#0" expanded="false" />
-                    <element signature="method#needYesOrNo#0;class#TakeInput#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Ship.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/company/Ship.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="573">
-                  <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
-                  <folding>
-                    <element signature="method#Ship#0;class#Ship#0" expanded="false" />
-                    <element signature="method#takeDamage#0;class#Ship#0" expanded="false" />
-                    <element signature="method#printLocationPoints#0;class#Ship#0" expanded="false" />
-                    <element signature="method#declareLengthAndDir#0;class#Ship#0" expanded="false" />
-                    <element signature="e#2944#2945#0" expanded="true" />
-                    <element signature="e#2982#2983#0" expanded="true" />
-                    <element signature="method#randomNumberUpTo#0;class#Ship#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="BoardTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/com/company/BoardTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="250" column="56" lean-forward="true" selection-start-line="250" selection-start-column="56" selection-end-line="250" selection-end-column="56" />
+              <folding>
+                <element signature="method#isAIGame#0;class#Game#0" expanded="false" />
+                <element signature="method#isSoloAiGame#0;class#Game#0" expanded="false" />
+                <element signature="method#startGame#0;class#Game#0" expanded="false" />
+                <element signature="method#mainAiGameStage#0;class#Game#0" expanded="false" />
+                <element signature="method#mainGameTwoPlayers#0;class#Game#0" expanded="false" />
+                <element signature="method#mainSoloAIGameStages#0;class#Game#0" expanded="false" />
+                <element signature="method#displayBoard#0;class#Game#0" expanded="false" />
+                <element signature="method#setUpBothBoardsWithShips#0;class#Game#0" expanded="false" />
+                <element signature="method#placeShip#0;class#Game#0" expanded="false" />
+                <element signature="method#addLocationsToShip#0;class#Game#0" expanded="false" />
+                <element signature="method#checkShipPlacements#0;class#Game#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Board.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+              <folding>
+                <element signature="method#Board#0;class#Board#0" expanded="false" />
+                <element signature="method#appendHeadings#0;class#Board#0" expanded="false" />
+                <element signature="method#appendHeadings2#0;class#Board#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="104" column="26" lean-forward="true" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+              <folding>
+                <element signature="method#isHasWon#0;class#User#0" expanded="false" />
+                <element signature="method#updateHasWon#0;class#User#0" expanded="false" />
+                <element signature="e#1332#1333#0" expanded="true" />
+                <element signature="e#1362#1363#0" expanded="true" />
+                <element signature="e#1396#1397#0" expanded="true" />
+                <element signature="e#1434#1435#0" expanded="true" />
+                <element signature="e#1692#1693#0" expanded="true" />
+                <element signature="e#1742#1743#0" expanded="true" />
+                <element signature="method#markMarkWithShot#0;class#User#0" expanded="false" />
+                <element signature="method#initHealth#0;class#User#0" expanded="false" />
+                <element signature="method#addDmgDone#0;class#User#0" expanded="false" />
+                <element signature="method#assignGrade#0;class#User#0" expanded="false" />
+                <element signature="method#guessIsInBounds#0;class#User#0" expanded="false" />
+                <element signature="method#randomNumberUpTo#0;class#User#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ship.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Ship.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding>
+                <element signature="method#Ship#0;class#Ship#0" expanded="false" />
+                <element signature="method#takeDamage#0;class#Ship#0" expanded="false" />
+                <element signature="e#2217#2218#0" expanded="true" />
+                <element signature="e#2272#2273#0" expanded="true" />
+                <element signature="method#declareLengthAndDir#0;class#Ship#0" expanded="false" />
+                <element signature="method#randomNumberUpTo#0;class#Ship#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TakeInput.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TakeInput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6">
+              <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#takeNextInt#0;class#TakeInput#0" expanded="false" />
+                <element signature="method#takeNextIntInRange#0;class#TakeInput#0" expanded="false" />
+                <element signature="method#requestInput#0;class#TakeInput#0" expanded="false" />
+                <element signature="method#requestInputInRange#0;class#TakeInput#0" expanded="false" />
+                <element signature="method#requestInputInRange#1;class#TakeInput#0" expanded="false" />
+                <element signature="method#requestYesOrNo#0;class#TakeInput#0" expanded="false" />
+                <element signature="method#askForBoardSize#0;class#TakeInput#0" expanded="false" />
+                <element signature="method#askForShipSize#0;class#TakeInput#0" expanded="false" />
+                <element signature="method#resultString#0;class#TakeInput#0" expanded="false" />
+                <element signature="method#stateGrade#0;class#TakeInput#0" expanded="false" />
+                <element signature="method#intToHigh#0;class#TakeInput#0" expanded="false" />
+                <element signature="method#needIntInRange#0;class#TakeInput#0" expanded="false" />
+                <element signature="method#needYesOrNo#0;class#TakeInput#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/com/company/GameTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShipTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/com/company/ShipTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#randomNumberGenerationBetweenRange_Test#0;class#ShipTest#0" expanded="false" />
+                <element signature="method#add_Reset_Location_Test#0;class#ShipTest#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TakeInputTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/com/company/TakeInputTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/com/company/UserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#updateHasWon_Test#0;class#UserTest#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/com/company/BoardTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -275,17 +209,17 @@
         <option value="$PROJECT_DIR$/src/com/company/Ships/Ship.java" />
         <option value="$PROJECT_DIR$/src/com/company/board/Board.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/com/company/Grade.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Board.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Game.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Ship.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TakeInput.java" />
+        <option value="$PROJECT_DIR$/src/com/company/User.java" />
+        <option value="$PROJECT_DIR$/tests/com/company/GameTest.java" />
+        <option value="$PROJECT_DIR$/tests/com/company/ShipTest.java" />
         <option value="$PROJECT_DIR$/tests/com/company/TakeInputTest.java" />
         <option value="$PROJECT_DIR$/tests/com/company/UserTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Grade.java" />
-        <option value="$PROJECT_DIR$/tests/com/company/GameTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TakeInput.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Ship.java" />
-        <option value="$PROJECT_DIR$/tests/com/company/ShipTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Game.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Board.java" />
-        <option value="$PROJECT_DIR$/src/com/company/User.java" />
       </list>
     </option>
   </component>
@@ -300,11 +234,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="562" />
-    <option name="y" value="-17" />
-    <option name="width" value="960" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -563,7 +496,7 @@
       <workItem from="1502438014644" duration="22937000" />
       <workItem from="1502475322331" duration="7159000" />
       <workItem from="1502489432914" duration="11000" />
-      <workItem from="1502489550273" duration="29060000" />
+      <workItem from="1502489550273" duration="30940000" />
     </task>
     <task id="LOCAL-00001" summary="User created">
       <created>1502458994287</created>
@@ -614,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502557913341</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Functioning&#10;&#10;Debug headers still on, Ships still visible as well.&#10;Ai eventually can win, could expand this with bad luck protection&#10;&#10;Should implement some sort of last guess tracking for future features like streaks.">
+      <created>1502570517519</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1502570517519</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -650,10 +590,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66663000" />
+    <option name="totallyTimeSpent" value="68543000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -669,7 +609,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21294363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -729,14 +669,15 @@
     <MESSAGE value="more testing, ai question solved, check guess solved" />
     <MESSAGE value="Play vs AI complete&#10;Grade functionality finished.&#10;&#10;Games with two boards incoming next." />
     <MESSAGE value="Fixed column row outOfBounds for real this time,&#10;&#10;To do&#10;10 by 10 Boards&#10;Games with two boards.&#10;Question to choose between the 3 game modes&#10;Removing m_ issues, reversing operator logic on !()== cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed column row outOfBounds for real this time,&#10;&#10;To do&#10;10 by 10 Boards&#10;Games with two boards.&#10;Question to choose between the 3 game modes&#10;Removing m_ issues, reversing operator logic on !()== cases" />
+    <MESSAGE value="Functioning&#10;&#10;Debug headers still on, Ships still visible as well.&#10;Ai eventually can win, could expand this with bad luck protection&#10;&#10;Should implement some sort of last guess tracking for future features like streaks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Functioning&#10;&#10;Debug headers still on, Ships still visible as well.&#10;Ai eventually can win, could expand this with bad luck protection&#10;&#10;Should implement some sort of last guess tracking for future features like streaks." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Ship.java</url>
-          <line>127</line>
+          <line>116</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
@@ -815,11 +756,8 @@
             <element signature="method#mainSoloAIGameStages#0;class#Game#0" expanded="false" />
             <element signature="method#displayBoard#0;class#Game#0" expanded="false" />
             <element signature="method#setUpBothBoardsWithShips#0;class#Game#0" expanded="false" />
-            <element signature="method#shipSetupProcess#0;class#Game#0" expanded="false" />
             <element signature="method#placeShip#0;class#Game#0" expanded="false" />
-            <element signature="method#getStartPoint#0;class#Game#0" expanded="false" />
             <element signature="method#addLocationsToShip#0;class#Game#0" expanded="false" />
-            <element signature="method#makeShipLocArray#0;class#Game#0" expanded="false" />
             <element signature="method#checkShipPlacements#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -907,11 +845,8 @@
             <element signature="method#mainSoloAIGameStages#0;class#Game#0" expanded="false" />
             <element signature="method#displayBoard#0;class#Game#0" expanded="false" />
             <element signature="method#setUpBothBoardsWithShips#0;class#Game#0" expanded="false" />
-            <element signature="method#shipSetupProcess#0;class#Game#0" expanded="false" />
             <element signature="method#placeShip#0;class#Game#0" expanded="false" />
-            <element signature="method#getStartPoint#0;class#Game#0" expanded="false" />
             <element signature="method#addLocationsToShip#0;class#Game#0" expanded="false" />
-            <element signature="method#makeShipLocArray#0;class#Game#0" expanded="false" />
             <element signature="method#checkShipPlacements#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -977,11 +912,8 @@
             <element signature="method#mainSoloAIGameStages#0;class#Game#0" expanded="false" />
             <element signature="method#displayBoard#0;class#Game#0" expanded="false" />
             <element signature="method#setUpBothBoardsWithShips#0;class#Game#0" expanded="false" />
-            <element signature="method#shipSetupProcess#0;class#Game#0" expanded="false" />
             <element signature="method#placeShip#0;class#Game#0" expanded="false" />
-            <element signature="method#getStartPoint#0;class#Game#0" expanded="false" />
             <element signature="method#addLocationsToShip#0;class#Game#0" expanded="false" />
-            <element signature="method#makeShipLocArray#0;class#Game#0" expanded="false" />
             <element signature="method#checkShipPlacements#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -1067,11 +999,8 @@
             <element signature="method#mainSoloAIGameStages#0;class#Game#0" expanded="false" />
             <element signature="method#displayBoard#0;class#Game#0" expanded="false" />
             <element signature="method#setUpBothBoardsWithShips#0;class#Game#0" expanded="false" />
-            <element signature="method#shipSetupProcess#0;class#Game#0" expanded="false" />
             <element signature="method#placeShip#0;class#Game#0" expanded="false" />
-            <element signature="method#getStartPoint#0;class#Game#0" expanded="false" />
             <element signature="method#addLocationsToShip#0;class#Game#0" expanded="false" />
-            <element signature="method#makeShipLocArray#0;class#Game#0" expanded="false" />
             <element signature="method#checkShipPlacements#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -1142,11 +1071,8 @@
             <element signature="method#mainSoloAIGameStages#0;class#Game#0" expanded="false" />
             <element signature="method#displayBoard#0;class#Game#0" expanded="false" />
             <element signature="method#setUpBothBoardsWithShips#0;class#Game#0" expanded="false" />
-            <element signature="method#shipSetupProcess#0;class#Game#0" expanded="false" />
             <element signature="method#placeShip#0;class#Game#0" expanded="false" />
-            <element signature="method#getStartPoint#0;class#Game#0" expanded="false" />
             <element signature="method#addLocationsToShip#0;class#Game#0" expanded="false" />
-            <element signature="method#makeShipLocArray#0;class#Game#0" expanded="false" />
             <element signature="method#checkShipPlacements#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -1210,11 +1136,8 @@
             <element signature="method#mainSoloAIGameStages#0;class#Game#0" expanded="false" />
             <element signature="method#displayBoard#0;class#Game#0" expanded="false" />
             <element signature="method#setUpBothBoardsWithShips#0;class#Game#0" expanded="false" />
-            <element signature="method#shipSetupProcess#0;class#Game#0" expanded="false" />
             <element signature="method#placeShip#0;class#Game#0" expanded="false" />
-            <element signature="method#getStartPoint#0;class#Game#0" expanded="false" />
             <element signature="method#addLocationsToShip#0;class#Game#0" expanded="false" />
-            <element signature="method#makeShipLocArray#0;class#Game#0" expanded="false" />
             <element signature="method#checkShipPlacements#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -1280,65 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/company/TakeInputTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/company/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateHasWon_Test#0;class#UserTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/company/GameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TakeInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-412">
-          <caret line="104" column="53" lean-forward="false" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#takeNextInt#0;class#TakeInput#0" expanded="false" />
-            <element signature="method#takeNextIntInRange#0;class#TakeInput#0" expanded="false" />
-            <element signature="method#requestInput#0;class#TakeInput#0" expanded="false" />
-            <element signature="method#requestInputInRange#0;class#TakeInput#0" expanded="false" />
-            <element signature="method#requestInputInRange#1;class#TakeInput#0" expanded="false" />
-            <element signature="method#requestYesOrNo#0;class#TakeInput#0" expanded="false" />
-            <element signature="method#askForBoardSize#0;class#TakeInput#0" expanded="false" />
-            <element signature="method#askForShipSize#0;class#TakeInput#0" expanded="false" />
-            <element signature="method#resultString#0;class#TakeInput#0" expanded="false" />
-            <element signature="method#intToHigh#0;class#TakeInput#0" expanded="false" />
-            <element signature="method#needIntInRange#0;class#TakeInput#0" expanded="false" />
-            <element signature="method#needYesOrNo#0;class#TakeInput#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Grade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1347,72 +1211,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
-          <folding>
-            <element signature="method#Ship#0;class#Ship#0" expanded="false" />
-            <element signature="method#takeDamage#0;class#Ship#0" expanded="false" />
-            <element signature="method#printLocationPoints#0;class#Ship#0" expanded="false" />
-            <element signature="method#declareLengthAndDir#0;class#Ship#0" expanded="false" />
-            <element signature="e#2944#2945#0" expanded="true" />
-            <element signature="e#2982#2983#0" expanded="true" />
-            <element signature="method#randomNumberUpTo#0;class#Ship#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/company/BoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/company/ShipTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="method#randomNumberGenerationBetweenRange_Test#0;class#ShipTest#0" expanded="false" />
-            <element signature="method#add_Reset_Location_Test#0;class#ShipTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="303" column="0" lean-forward="true" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
-          <folding>
-            <element signature="method#isAIGame#0;class#Game#0" expanded="false" />
-            <element signature="method#isSoloAiGame#0;class#Game#0" expanded="false" />
-            <element signature="method#startGame#0;class#Game#0" expanded="false" />
-            <element signature="method#mainAiGameStage#0;class#Game#0" expanded="false" />
-            <element signature="method#mainGameTwoPlayers#0;class#Game#0" expanded="false" />
-            <element signature="method#mainSoloAIGameStages#0;class#Game#0" expanded="false" />
-            <element signature="method#displayBoard#0;class#Game#0" expanded="false" />
-            <element signature="method#setUpBothBoardsWithShips#0;class#Game#0" expanded="false" />
-            <element signature="method#shipSetupProcess#0;class#Game#0" expanded="false" />
-            <element signature="method#placeShip#0;class#Game#0" expanded="false" />
-            <element signature="method#getStartPoint#0;class#Game#0" expanded="false" />
-            <element signature="method#addLocationsToShip#0;class#Game#0" expanded="false" />
-            <element signature="method#makeShipLocArray#0;class#Game#0" expanded="false" />
-            <element signature="method#checkShipPlacements#0;class#Game#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1428,10 +1231,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="250" column="56" lean-forward="true" selection-start-line="250" selection-start-column="56" selection-end-line="250" selection-end-column="56" />
+          <folding>
+            <element signature="method#isAIGame#0;class#Game#0" expanded="false" />
+            <element signature="method#isSoloAiGame#0;class#Game#0" expanded="false" />
+            <element signature="method#startGame#0;class#Game#0" expanded="false" />
+            <element signature="method#mainAiGameStage#0;class#Game#0" expanded="false" />
+            <element signature="method#mainGameTwoPlayers#0;class#Game#0" expanded="false" />
+            <element signature="method#mainSoloAIGameStages#0;class#Game#0" expanded="false" />
+            <element signature="method#displayBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#setUpBothBoardsWithShips#0;class#Game#0" expanded="false" />
+            <element signature="method#placeShip#0;class#Game#0" expanded="false" />
+            <element signature="method#addLocationsToShip#0;class#Game#0" expanded="false" />
+            <element signature="method#checkShipPlacements#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="method#Ship#0;class#Ship#0" expanded="false" />
+            <element signature="method#takeDamage#0;class#Ship#0" expanded="false" />
+            <element signature="e#2217#2218#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="method#declareLengthAndDir#0;class#Ship#0" expanded="false" />
+            <element signature="method#randomNumberUpTo#0;class#Ship#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TakeInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#takeNextInt#0;class#TakeInput#0" expanded="false" />
+            <element signature="method#takeNextIntInRange#0;class#TakeInput#0" expanded="false" />
+            <element signature="method#requestInput#0;class#TakeInput#0" expanded="false" />
+            <element signature="method#requestInputInRange#0;class#TakeInput#0" expanded="false" />
+            <element signature="method#requestInputInRange#1;class#TakeInput#0" expanded="false" />
+            <element signature="method#requestYesOrNo#0;class#TakeInput#0" expanded="false" />
+            <element signature="method#askForBoardSize#0;class#TakeInput#0" expanded="false" />
+            <element signature="method#askForShipSize#0;class#TakeInput#0" expanded="false" />
+            <element signature="method#resultString#0;class#TakeInput#0" expanded="false" />
+            <element signature="method#stateGrade#0;class#TakeInput#0" expanded="false" />
+            <element signature="method#intToHigh#0;class#TakeInput#0" expanded="false" />
+            <element signature="method#needIntInRange#0;class#TakeInput#0" expanded="false" />
+            <element signature="method#needYesOrNo#0;class#TakeInput#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="196" column="1" lean-forward="true" selection-start-line="196" selection-start-column="1" selection-end-line="196" selection-end-column="1" />
+        <state relative-caret-position="292">
+          <caret line="104" column="26" lean-forward="true" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
           <folding>
             <element signature="method#isHasWon#0;class#User#0" expanded="false" />
             <element signature="method#updateHasWon#0;class#User#0" expanded="false" />
@@ -1448,6 +1309,57 @@
             <element signature="method#guessIsInBounds#0;class#User#0" expanded="false" />
             <element signature="method#randomNumberUpTo#0;class#User#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/company/GameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/company/ShipTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#randomNumberGenerationBetweenRange_Test#0;class#ShipTest#0" expanded="false" />
+            <element signature="method#add_Reset_Location_Test#0;class#ShipTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/company/TakeInputTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/company/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#updateHasWon_Test#0;class#UserTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/company/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

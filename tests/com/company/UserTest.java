@@ -6,13 +6,13 @@ import org.junit.Test;
 
 public class UserTest {
 
-    Game game = new Game();
-    TakeInput takeInput = new TakeInput();
-    User ai;
-    User testing;
-    Board boardAI = new Board(7);
-    Ship ship = new Ship(3);
-    Ship ship2 = new Ship(5);
+    private Game game = new Game();
+    private TakeInput takeInput = new TakeInput();
+    private User ai;
+    private User testing;
+    private  Board boardAI = new Board(7);
+    private Ship ship = new Ship(3);
+    private Ship ship2 = new Ship(5);
 
 
     @Before

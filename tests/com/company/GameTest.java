@@ -9,12 +9,12 @@ import static com.company.Grade.S;
 public class GameTest {
 
 
-    Game testing;
-    TakeInput takeInput = new TakeInput();
-    User ai = new User();
-    User player1 = new User();
-    Board boardAI = new Board(7);
-    Ship ship = new Ship(3);
+    private Game testing;
+    private TakeInput takeInput = new TakeInput();
+    private User ai = new User();
+    private  User player1 = new User();
+    private  Board boardAI = new Board(7);
+    private   Ship ship = new Ship(3);
 
     @Before
     public void setUp() {
