@@ -140,6 +140,7 @@ public class TakeInput {
         return "You sunk " + ship.getM_name() + "!";
     }
 
+    /**1 or 2 or AI*/
     static public String resultString(String p12orAI) {
         String tmp;
         if (p12orAI.equalsIgnoreCase("1")) {
@@ -155,7 +156,7 @@ public class TakeInput {
     static public String stateGrade(Grade grade) {
         String tmp;
         if (grade == Grade.S) {
-            tmp = "You earned a " + grade + " ranking! That's a perfect score!";
+            tmp = "You earned an " + grade + " ranking! That's a perfect score!";
         } else if (grade == Grade.A) {
             tmp = "You earned an " + grade + " ranking!";
         } else {

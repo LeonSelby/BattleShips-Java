@@ -17,8 +17,6 @@ public class Board {
         }
     }
 
-
-
     public String appendHeadings(Board board) {
         int[] numberOfColumns = new int[board.m_columns];
         StringBuilder sb = new StringBuilder(board.m_columns + 50);

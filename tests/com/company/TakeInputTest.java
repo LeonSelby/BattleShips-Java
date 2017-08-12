@@ -12,8 +12,8 @@ public class TakeInputTest {
 
     Game newGame = new Game();
     TakeInput testing;
-    User ai = new User("AI");
-    User player1 = new User("Player One");
+    User ai = new User();
+    User player1 = new User();
     Board boardAI = new Board(7);
     Ship ship = new Ship(3);
 

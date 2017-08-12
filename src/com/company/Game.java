@@ -27,25 +27,18 @@ public class Game {
         int boardSize = TakeInput.requestInput(TakeInput.askForBoardSize());
         int shipAmount = TakeInput.requestInput(TakeInput.askForShipAmount());
 
-
         if (aiGame) {
-            this.player1 = new User("Player");
-            this.AI = new User("AI");
+            this.player1 = new User();
+            this.AI = new User();
+            this.AI.setAI(true);
             this.boardAI = new Board(boardSize);
-
-
             mainAIGameStages(shipAmount);
         } else {
-            player1 = new User("Player One");
+            player1 = new User();
             this.boardPlayer1 = new Board(boardSize);
-            player2 = new User("Player Two");
+            player2 = new User();
             this.boardPlayer2 = new Board(boardSize);
         }
-
-
-        displayBoard(boardAI);
-        player1.shoot(boardAI);
-        displayBoard(boardAI);
     }
 
     public void mainAIGameStages(int shipAmount) {
@@ -57,7 +50,8 @@ public class Game {
             System.out.println(player1.getM_dmgDone() + " out of " + player1.getM_health());
         } while (!player1.isHasWon());
 
-        System.out.println(TakeInput.resultString("player one"));
+        System.out.println(TakeInput.resultString("1"));
+        System.out.println(TakeInput.stateGrade(player1.getAssignedGrade()));
     }
 
 
@@ -110,6 +104,7 @@ public class Game {
             }
         }
         user.initHealth();
+        player1.setM_health(user.getM_health());
     }
 
     public void placeShip(Board board, Ship ship) {
@@ -206,7 +201,6 @@ public class Game {
 
 
 //Getters and Setters
-
 
     public Board getBoardPlayer1() {
         return this.boardPlayer1;

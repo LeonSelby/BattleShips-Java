@@ -12,8 +12,8 @@ public class ShipTest {
 
     Game newGame = new Game();
     TakeInput takeInput = new TakeInput();
-    User ai = new User("AI");
-    User player1 = new User("Player One");
+    User ai = new User();
+    User player1 = new User();
     Board boardAI = new Board(7);
     Ship testing;
 
