@@ -97,8 +97,8 @@ public class User {
         int guessX;
         int guessY;
         do {
-            guessX = TakeInput.requestInput(TakeInput.askForGuess("column")) - 1;
-            guessY = TakeInput.requestInput(TakeInput.askForGuess("row")) - 1;
+            guessX = TakeInput.requestInputInRange(TakeInput.askForGuess("column"),1,board.m_columns) - 1;
+            guessY = TakeInput.requestInputInRange(TakeInput.askForGuess("row"), 1,board.m_columns) - 1;
             guessReq = new Point(guessY, guessX);
         } while (
                 (!(guessIsInBounds(guessReq, board)))
