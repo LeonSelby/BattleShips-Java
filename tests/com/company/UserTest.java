@@ -33,9 +33,9 @@ public class UserTest {
     public void addDmgDone_Test() {
 
         testing.addDmgDone(1);
-        Assert.assertEquals(1, testing.getM_dmgDone());
+        Assert.assertEquals(1, testing.getDmgDone());
         testing.addDmgDone(1);
-        Assert.assertEquals(2, testing.getM_dmgDone());
+        Assert.assertEquals(2, testing.getDmgDone());
     }
 
     @Test
@@ -43,7 +43,7 @@ public class UserTest {
         testing.addShipToUser(ship);
         testing.addShipToUser(ship2);
         testing.initHealth();
-        Assert.assertEquals(8, testing.getM_health());
+        Assert.assertEquals(8, testing.getHealth());
     }
 
     @Test

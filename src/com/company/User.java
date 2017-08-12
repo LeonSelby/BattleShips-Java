@@ -1,8 +1,5 @@
 package com.company;
 
-import com.company.Ship;
-import com.company.Board;
-
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +8,8 @@ import static com.company.Grade.*;
 
 public class User {
 
-    private int m_health;
-    private int m_dmgDone;
+    private int health;
+    private int dmgDone;
     private boolean hasWon = false;
     private List<Ship> listOfShips = new ArrayList<Ship>();
     private boolean isAI = false;
@@ -22,12 +19,12 @@ public class User {
     //Constructors
 
     //Getters and Setters
-    public int getM_health() {
-        return this.m_health;
+    public int getHealth() {
+        return this.health;
     }
 
-    public void setM_health(int m_health) {
-        this.m_health = m_health;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public List<Ship> getListOfShips() {
@@ -40,8 +37,8 @@ public class User {
     }
 
     public void updateHasWon() {
-        int dmgDone = this.getM_dmgDone();
-        int health = this.getM_health();
+        int dmgDone = this.getDmgDone();
+        int health = this.getHealth();
 
         if (dmgDone == health) {
             this.setHasWon(true);
@@ -54,12 +51,12 @@ public class User {
         this.hasWon = hasWon;
     }
 
-    public int getM_dmgDone() {
-        return this.m_dmgDone;
+    public int getDmgDone() {
+        return this.dmgDone;
     }
 
-    public void setM_dmgDone(int m_dmgDone) {
-        this.m_dmgDone = m_dmgDone;
+    public void setDmgDone(int dmgDone) {
+        this.dmgDone = dmgDone;
     }
 
     public boolean isAI() {
@@ -97,44 +94,59 @@ public class User {
         int guessX;
         int guessY;
         do {
-            guessX = TakeInput.requestInputInRange(TakeInput.askForGuess("column"),1,board.m_columns) - 1;
-            guessY = TakeInput.requestInputInRange(TakeInput.askForGuess("row"), 1,board.m_columns) - 1;
+            guessX = TakeInput.requestInputInRange(TakeInput.askForGuess("column"), 1, board.getBoardColumns()) - 1;
+            guessY = TakeInput.requestInputInRange(TakeInput.askForGuess("row"), 1, board.getBoardColumns()) - 1;
             guessReq = new Point(guessY, guessX);
         } while (
                 (!(guessIsInBounds(guessReq, board)))
                         &&
-                        (!(board.m_board[guessX][guessY] > 0)));
+                        (!(board.boardArray[guessX][guessY] > 0)));
+        this.markMarkWithShot(board, guessReq);
+        this.shotsTaken++;
+    }
+
+    public void shootAsAI(Board board) {
+        System.out.println("The AI takes aim...");
+        Point guessReq = new Point(0, 0);
+        int guessX, guessY;
+        do {
+            guessX = randomNumberUpTo(0, board.getBoardColumns());//MIGHT BE WRONG
+            guessY = randomNumberUpTo(0, board.getBoardColumns());
+            guessReq = new Point(guessY, guessX);
+        } while ((!(guessIsInBounds(guessReq, board)))
+                        &&
+                        (!(board.boardArray[guessX][guessY] > 0)));
         this.markMarkWithShot(board, guessReq);
         this.shotsTaken++;
     }
 
     public void markMarkWithShot(Board board, Point guess) {
-        if (board.m_board[guess.x][guess.y] == 1) {
+        if (board.boardArray[guess.x][guess.y] == 1) {
             System.out.println(TakeInput.guessResponse("hit"));
-            board.m_board[guess.x][guess.y] = 2;
+            board.boardArray[guess.x][guess.y] = 2;
             this.addDmgDone(1);
-        } else if (board.m_board[guess.x][guess.y] == -1) {
+        } else if (board.boardArray[guess.x][guess.y] == -1) {
             System.out.println(TakeInput.guessResponse("miss"));
-            board.m_board[guess.x][guess.y] = 0;
+            board.boardArray[guess.x][guess.y] = 0;
         }
     }
 
     public void initHealth() {
         int hp = 0;
         for (Ship s : this.getListOfShips()) {
-            hp += s.getM_length();
+            hp += s.getLength();
         }
-        this.setM_health(hp);
+        this.setHealth(hp);
     }
 
     public void addDmgDone(int dmgDone) {
-        int tmp = this.getM_dmgDone() + dmgDone;
-        this.setM_dmgDone(tmp);
+        int tmp = this.getDmgDone() + dmgDone;
+        this.setDmgDone(tmp);
     }
 
     public void assignGrade() {
         int shotsTaken = this.getShotsTaken();
-        int shotsRequired = this.getM_health();
+        int shotsRequired = this.getHealth();
         int score = shotsRequired / shotsTaken * 100;
         switch (score) {
             case 100:
@@ -148,6 +160,7 @@ public class User {
                 break;
             case 70:
                 this.setAssignedGrade(C);
+                break;
             case 60:
                 this.setAssignedGrade(D);
                 break;
@@ -160,19 +173,24 @@ public class User {
         }
     }
 
-        //Utility
+    //Utility
     public boolean guessIsInBounds(Point guess, Board board) {
         int xValue = guess.x;
         int yValue = guess.y;
         boolean tmp = true;
-        if (xValue > board.getM_rows() - 1) {
+        if (xValue > board.getBoardRows() - 1) {
             tmp = false;
         }
-        if (yValue > board.getM_columns() - 1) {
+        if (yValue > board.getBoardColumns() - 1) {
             tmp = false;
         }
         return tmp;
 
+    }
+
+    public int randomNumberUpTo(int min, int max) {
+        int range = (max - min);
+        return (int) (Math.random() * range) + min;
     }
 
 

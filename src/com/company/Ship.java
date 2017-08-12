@@ -4,81 +4,77 @@ import java.awt.*;
 
 public class Ship {
 
-    private int m_health = 0, m_length = 0;
-    private String m_name = null;
-    private Point[] locations = new Point[m_length];
+    private int health = 0, length = 0;
+    private String name = null;
+    private Point[] locations = new Point[length];
     private boolean isHorizontal;
     private boolean m_alive = isAlive();
 
     //Constructor
     public Ship(int health) {
-        this.m_health = health;
-        this.m_length = health;
+        this.health = health;
+        this.length = health;
         this.m_alive = true;
         this.isHorizontal = isHorizontal();
         switch (health) {
             case 0:
-                this.m_name = "Phantom Boat";
+                this.name = "Phantom Boat";
                 break;
             case 1:
-                this.m_name = "Patrol Boat";
+                this.name = "Patrol Boat";
                 break;
             case 2:
-                this.m_name = "Landing Craft";
+                this.name = "Landing Craft";
                 break;
             case 3:
-                this.m_name = "Light Cruiser";
+                this.name = "Light Cruiser";
                 break;
             case 4:
-                this.m_name = "Frigate";
+                this.name = "Frigate";
                 break;
             case 5:
-                this.m_name = "Dreadnought";
+                this.name = "Dreadnought";
                 break;
             case 6:
-                this.m_name = "Ironclad";
+                this.name = "Ironclad";
                 break;
             case 7:
-                this.m_name = "Aircraft Cruiser";
+                this.name = "Aircraft Cruiser";
                 break;
             case 8:
-                this.m_name = "Destroyer";
+                this.name = "Destroyer";
                 break;
             case 9:
-                this.m_name = "Battlecruiser";
+                this.name = "Battlecruiser";
                 break;
             default:
-                this.m_name = "Uberboat(" + health + ")";
+                this.name = "Uberboat(" + health + ")";
                 break;
         }
     }
 
     //Methods
     public void takeDamage (int damageTaken) {
-        if (this.isM_alive()) {
-            this.setM_health(this.getM_health() - damageTaken);
+        if (this.isAlive()) {
+            this.setHealth(this.getHealth() - damageTaken);
         }
     }
 
     //Getters and Setters
-    public int getM_health() {
-        return this.m_health;
+    public int getHealth() {
+        return this.health;
     }
 
-    public boolean isM_alive() {
-        return this.m_alive;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
-    public void setM_health(int m_health) {
-        this.m_health = m_health;
+    public String getName() {
+        return this.name;
     }
 
-    public String getM_name() {
-        return this.m_name;
-    }
-
-    public int getM_length() {
-        return this.m_length;
+    public int getLength() {
+        return this.length;
     }
 
     public void setHorizontal(boolean horizontal) {
@@ -99,7 +95,7 @@ public class Ship {
     }
 
     public void clearLocations() {
-        this.locations = new Point[this.m_length];
+        this.locations = new Point[this.length];
     }
 
     public void printLocationPoints(){
@@ -117,16 +113,15 @@ public class Ship {
         } else if (!this.getIsHorizontal()) {
             direction = "vertical";
         }
-        System.out.println(direction + " " + this.getM_name()+", ship length is "
-                + this.getM_length());
+        System.out.println(direction + " " + this.getName()+", ship length is "
+                + this.getLength());
     }
 
 
     //Utility Booleans
     public boolean isAlive() {
-        return this.m_health > 0;
+        return this.health > 0;
     }
-
 
     //Utility Methods
     public int randomNumberUpTo(int min, int max) {

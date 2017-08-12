@@ -2,24 +2,23 @@ package com.company;
 
 public class Board {
 
-    int m_rows, m_columns;
-    public int m_tiles = m_rows*m_columns;
-    public int[][] m_board;
+    private int boardRows, boardColumns;
+    public int[][] boardArray;
 
     public Board(int size) {
-        this.m_rows = size;
-        this.m_columns = size;
-        this.m_board = new int[size][size];
+        this.boardRows = size;
+        this.boardColumns = size;
+        this.boardArray = new int[size][size];
         for (int r = 0; r < size; r++) {
             for (int c = 0; c < size; c++) {
-                m_board[r][c] = -1;
+                boardArray[r][c] = -1;
             } //Sets two arrays to -1, size determined by BOARD_SIZE
         }
     }
 
     public String appendHeadings(Board board) {
-        int[] numberOfColumns = new int[board.m_columns];
-        StringBuilder sb = new StringBuilder(board.m_columns + 50);
+        int[] numberOfColumns = new int[board.boardColumns];
+        StringBuilder sb = new StringBuilder(board.boardColumns + 50);
         for (int i = 0; i < numberOfColumns.length; i++) {
             sb.append("\t");
             int tmp = i + 1;
@@ -29,8 +28,8 @@ public class Board {
     }
 
     public String appendHeadings2(Board board) {
-        int[] numberOfColumns = new int[board.m_columns];
-        StringBuilder sb = new StringBuilder(board.m_columns + 50);
+        int[] numberOfColumns = new int[board.boardColumns];
+        StringBuilder sb = new StringBuilder(board.boardColumns + 50);
         for (int i = 0; i < numberOfColumns.length; i++) {
             sb.append("\t");
             int tmp = i;
@@ -41,25 +40,20 @@ public class Board {
 
 
 
-
     //Getters and Setters
-    public int getM_rows() {
-        return m_rows;
+    public int getBoardRows() {
+        return boardRows;
     }
 
-    public int getM_columns() {
-        return m_columns;
+    public int getBoardColumns() {
+        return boardColumns;
     }
 
-    public int getM_tiles() {
-        return m_tiles;
+    public int[][] getBoardArray() {
+        return boardArray;
     }
 
-    public int[][] getM_board() {
-        return m_board;
-    }
-
-    public void setM_board(int[][] m_board) {
-        this.m_board = m_board;
+    public void setBoardArray(int[][] boardArray) {
+        this.boardArray = boardArray;
     }
 }

@@ -101,6 +101,10 @@ public class TakeInput {
         return "Do you want to play vs the AI?";
     }
 
+    static public String askIfSoloAiGame(){
+        return "Do you want to try shoot only mode?";
+    }
+
     static public String askForBoardSize() {
         return "How many rows and columns would you like the board to have?\n Please enter a number.";
     }
@@ -137,7 +141,7 @@ public class TakeInput {
     }
 
     static public String youSunk(Ship ship) {
-        return "You sunk " + ship.getM_name() + "!";
+        return "You sunk " + ship.getName() + "!";
     }
 
     /**1 or 2 or AI*/

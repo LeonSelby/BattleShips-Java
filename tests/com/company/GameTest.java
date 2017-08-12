@@ -29,7 +29,7 @@ public class GameTest {
 
     @Test
     public void assignGrade_Test() {
-        player1.setM_health(8);
+        player1.setHealth(8);
         player1.setShotsTaken(8);
         player1.assignGrade();
         Assert.assertEquals(S, player1.getAssignedGrade());
