@@ -10,16 +10,15 @@ public class Game {
     private User AI;
     private User player1;
     private User player2;
+    private boolean aiGame = false;
+
 
     public boolean isAIGame() {
-        int answer = TakeInput.requestInput(TakeInput.askIfAiGame());
-        boolean tmp = false;
-        if (answer == 0) {
-            tmp = false;
-        } else {
-            tmp = true;
+        boolean ans = TakeInput.requestYesOrNo(TakeInput.askIfAiGame());
+        if (ans) {
+            this.setAiGame(true);
         }
-        return tmp;
+        return ans;
     }
 
     public void startGame() {
@@ -55,7 +54,7 @@ public class Game {
         do {
             displayBoard(boardAI);
             player1.shoot(boardAI);
-            System.out.println(player1.getM_dmgDone()+" out of "+player1.getM_health());
+            System.out.println(player1.getM_dmgDone() + " out of " + player1.getM_health());
         } while (!player1.isHasWon());
 
         System.out.println(TakeInput.resultString("player one"));
@@ -91,38 +90,23 @@ public class Game {
 
     //Ship placement Logic
     public void shipSetupProcess(Board board, User user, int shipAmount) {
-
+        int shipSize;
         for (int i = 0; i < shipAmount; i++) {
             if (i == 0) {
-                int shipSize = TakeInput.requestInput(TakeInput.askForShipSize(true));
-                if (shipSize > board.getM_rows()) {
-                    TakeInput.intToHigh();
-                    shipSize = TakeInput.requestInput(TakeInput.askForShipSize(true));
-                } else {
-                    Ship ship = new Ship(shipSize);
-                    placeShip(board, ship);
-                    user.addShipToUser(ship);
-                }
+                shipSize = TakeInput.requestInputInRange(TakeInput.askForShipSize(true), board.getM_rows());
+                Ship ship = new Ship(shipSize);
+                placeShip(board, ship);
+                user.addShipToUser(ship);
             } else if (i == shipAmount - 1) {
-                int shipSize = TakeInput.requestInput(TakeInput.askForShipSizeLast());
-                if (shipSize > board.getM_rows()) {
-                    TakeInput.intToHigh();
-                    shipSize = TakeInput.requestInput(TakeInput.askForShipSizeLast());
-                } else {
-                    Ship ship = new Ship(shipSize);
-                    placeShip(board, ship);
-                    user.addShipToUser(ship);
-                }
+                shipSize = TakeInput.requestInputInRange(TakeInput.askForShipSizeLast(), board.getM_rows());
+                Ship ship = new Ship(shipSize);
+                placeShip(board, ship);
+                user.addShipToUser(ship);
             } else {
-                int shipSize = TakeInput.requestInput(TakeInput.askForShipSize(false));
-                if (shipSize > board.getM_rows()) {
-                    TakeInput.intToHigh();
-                    shipSize = TakeInput.requestInput(TakeInput.askForShipSize(false));
-                } else {
-                    Ship ship = new Ship(shipSize);
-                    placeShip(board, ship);
-                    user.addShipToUser(ship);
-                }
+                shipSize = TakeInput.requestInputInRange(TakeInput.askForShipSize(false), board.getM_rows());
+                Ship ship = new Ship(shipSize);
+                placeShip(board, ship);
+                user.addShipToUser(ship);
             }
         }
         user.initHealth();
@@ -218,6 +202,66 @@ public class Game {
             }
         }
         return allValid;
+    }
+
+
+//Getters and Setters
+
+
+    public Board getBoardPlayer1() {
+        return this.boardPlayer1;
+    }
+
+    public void setBoardPlayer1(Board boardPlayer1) {
+        this.boardPlayer1 = boardPlayer1;
+    }
+
+    public Board getBoardPlayer2() {
+        return this.boardPlayer2;
+    }
+
+    public void setBoardPlayer2(Board boardPlayer2) {
+        this.boardPlayer2 = boardPlayer2;
+    }
+
+    public Board getBoardAI() {
+        return this.boardAI;
+    }
+
+    public void setBoardAI(Board boardAI) {
+        this.boardAI = boardAI;
+    }
+
+    public User getAI() {
+        return this.AI;
+    }
+
+    public void setAI(User AI) {
+        this.AI = AI;
+    }
+
+    public User getPlayer1() {
+        return this.player1;
+    }
+
+    public void setPlayer1(User player1) {
+        this.player1 = player1;
+    }
+
+    public User getPlayer2() {
+        return this.player2;
+    }
+
+    public void setPlayer2(User player2) {
+        this.player2 = player2;
+    }
+
+    public boolean isAiGameGetter() {
+        return this.aiGame;
+    }
+
+    public void setAiGame(boolean aiGame) {
+        this.aiGame = aiGame;
     }
 }
 

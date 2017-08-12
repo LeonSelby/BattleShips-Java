@@ -74,11 +74,11 @@ public class Ship {
     }
 
     public String getM_name() {
-        return m_name;
+        return this.m_name;
     }
 
     public int getM_length() {
-        return m_length;
+        return this.m_length;
     }
 
     public void setHorizontal(boolean horizontal) {
@@ -104,11 +104,8 @@ public class Ship {
 
     public void printLocationPoints(){
         String tmp = "";
-
-        for (Point p:this.getLocation()
-             ) {
+        for (Point p:this.getLocation()) {
             tmp+= " "+p;
-
         }
         System.out.println(tmp);
     }
@@ -127,7 +124,7 @@ public class Ship {
 
     //Utility Booleans
     public boolean isAlive() {
-        return m_health > 0;
+        return this.m_health > 0;
     }
 
 

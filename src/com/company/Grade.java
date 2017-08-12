@@ -7,7 +7,6 @@ public enum Grade {
     C,
     D;
 
-
     Grade() {}
 
     void listOfGrades() {

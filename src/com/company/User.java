@@ -4,7 +4,6 @@ import com.company.Ship;
 import com.company.Board;
 
 import java.awt.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,13 +12,10 @@ public class User {
     private int m_health;
     private int m_dmgDone;
     private boolean hasWon = false;
-    private String name = "";
     private List<Ship> listOfShips = new ArrayList<Ship>();
+    private boolean isAI = false;
 
     //Constructors
-    public User(String name) {
-        this.name = name;
-    }
 
     //Getters and Setters
     public int getM_health() {
@@ -54,16 +50,20 @@ public class User {
         this.hasWon = hasWon;
     }
 
-    public String getName() {
-        return this.name;
-    }
-
     public int getM_dmgDone() {
         return this.m_dmgDone;
     }
 
     public void setM_dmgDone(int m_dmgDone) {
         this.m_dmgDone = m_dmgDone;
+    }
+
+    public boolean isAI() {
+        return isAI;
+    }
+
+    public void setAI(boolean AI) {
+        this.isAI = AI;
     }
 
     //Methods
